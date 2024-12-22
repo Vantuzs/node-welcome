@@ -1,15 +1,25 @@
 'use strict';
 
- 
-const {MyMath} = require('./MyMath.js');
-const {Component} = require('./Component.js');
+/* 
 
-console.log(MyMath);
-console.log(require('./MyMath.js'));
-const sum2n2 = MyMath.sum(2,2);
-console.log(sum2n2);
-const multy3n5 = MyMath.multy(3,5);
-console.log(multy3n5);
+require(path) 
 
-const component = new Component();
-console.log(component.render());
+Как работает require(HOW REQUIRE WORKS)
+
+resolving: ищет файл который мы указали -> 
+loading: читает файл, когда файл прочитано -> 
+wrappening: оборачивание в node контекст -> 
+evaluation: код выполнется -> 
+caching: кешируется результат, сохраняет результат роботы нашего модуля, код в середине модуля выполнится 1 раз
+
+RESOLVING:
+    1) Core modules(встроеные модули)
+    2) File
+        *.js|| *.json
+    3)
+        3.1) package.json -> "main"
+        3.2) index.js || index.json
+    4) node_modules
+    5) throw new Error();
+
+*/
